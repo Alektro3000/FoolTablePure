@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>D:\projects\2semEnd\FoolTablePure\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="Forms\BatchControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Forms\DXControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Forms\ResultControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Forms\TableControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Forms\VisualControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Forms\VisualTourControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Main\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Main\GameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Main\TourForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
