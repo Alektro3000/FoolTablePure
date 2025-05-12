@@ -25,11 +25,13 @@ namespace CardTableFool.Main
             TourBatchCount,
             DepthOfFinal,
             ShowSurnames,
-			BarAnimFetch
+			BarAnimFetch,
+
+            View3d
 		}
 
 
-        static public int[] Settings = {0,4,100,10,1,1,1,1,1,100, 1, 1, 200, 0,0,6};
+        static public int[] Settings = {0,4,100,10,1,1,1,1,1,100, 1, 1, 200, 0,0,6, 0};
 
         static string SettingsName = "Settings.txt";
         static public event EventHandler SettingsChanged;

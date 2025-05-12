@@ -242,6 +242,9 @@ namespace CardTableFool.Main
             if (_SelectedCard != null)
                 _SelectedCard.IsCurrentlyHover = false;
             _SelectedCard = null;
+            
+            if (World == null)
+                return;
 
             if (CanSelectDeck)
             {

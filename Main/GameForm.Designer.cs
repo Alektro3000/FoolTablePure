@@ -38,14 +38,8 @@ namespace CardTableFool.Main
 			oneMatchToolStripMenuItem = new ToolStripMenuItem();
 			batchMatchToolStripMenuItem = new ToolStripMenuItem();
 			ShowResult = new ToolStripMenuItem();
-			GameGroup.SuspendLayout();
-			SuspendLayout();
 
 			Menu.Items.AddRange(new ToolStripItem[] {SetUpPlayers, SingleGame, ShowResult});
-			// 
-			// FirstPlayerName
-			// 
-			FirstPlayerName.Location = new Point(814, 620);
 			// 
 			// SetUpPlayers
 			// 
@@ -173,16 +167,7 @@ namespace CardTableFool.Main
 			ShowResult.Text = "Показать результат";
 			ShowResult.ToolTipText = "Показывает результаты пачек битв между игроками";
 			ShowResult.Click += ShowResult_Click;
-			// 
-			// GameForm
-			// 
-			AutoScaleDimensions = new SizeF(9F, 21F);
-			ClientSize = new Size(1062, 672);
-			Name = "GameForm";
-			GameGroup.ResumeLayout(false);
-			GameGroup.PerformLayout();
-			ResumeLayout(false);
-			PerformLayout();
+			
 		}
 
 

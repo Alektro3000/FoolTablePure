@@ -318,15 +318,18 @@ namespace CardTableFool.Forms
 				cardsinfo[i].Id.Y = CardsToRender[i].GetIdBack();
 			}
 			context.UpdateSubresource(cardsinfo, constantCardBuffer);
-		}
-		protected Matrix GetViewMatrix()
+        }
+        float interpolation = 0;
+        protected Matrix GetViewMatrix()
 		{
-			Vector3 cameraPos = new Vector3(0.0f, 0, 10.0f);
+			interpolation = Program.GetBoolSetting(Program.GlobalSetting.View3d) ? 1 : 0;
+            Vector3 cameraPos;
+            cameraPos = Vector3.Hermite(new Vector3(0.0f, 0, 10.0f), new Vector3(0.0f, 0, 1.0f), new Vector3(0.0f, -9.0f, 6.0f), new Vector3(0.0f, 0, 1.0f), interpolation);
 
 			Matrix view = Matrix.LookAtLH(cameraPos, new Vector3(0.0f, 0, 1.0f), Vector3.UnitY);
 
 			view *= Matrix.PerspectiveFovLH(
-				Fov / 2, AspectRatio, 7f, 16.0f);
+				Fov / 2, AspectRatio, 2f, 32.0f);
 			return view;
 		}
 		protected override void OnMouseMove(MouseEventArgs e)
@@ -335,8 +338,8 @@ namespace CardTableFool.Forms
 			if (DesignMode)
 				return;
 			MouseEventArgs mouse = e;
-
-			Vector2 point = -2 * new Vector2(AspectRatio * ((float)mouse.X / ClientSize.Width - 0.5f),
+			//interpolation = (float)mouse.X / ClientSize.Width;
+            Vector2 point = -2 * new Vector2(AspectRatio * ((float)mouse.X / ClientSize.Width - 0.5f),
 				(float)mouse.Y / ClientSize.Height - 0.5f);
 
 			point *= 10 * (float)Math.Tan(Fov / 4);
